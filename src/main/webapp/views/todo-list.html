@@ -1,0 +1,17 @@
+<div id="todoList">
+
+    <div class="row">
+            <h2>Liste des todos</h2>
+            <dic ng-click="gotoTodoNewPage()" class="btn btn-lg btn-primary">Ajouter</button>
+    </div>
+    <div class="row">
+
+        <ul>
+        <li ng-repeat="todo in todos">
+            <a href="#/todo/{{todo.id}}"><span class="todoTitle">{{todo.title}}</span></a> :
+            <span>{{todo.description | filter:ellipsis:20}}</span> &nbsp;
+            <button  class="btn btn-lg btn-primary" ng-click="deleteTodo(todo)">Delete</button>
+        </li>
+    </ul>
+    </div>
+</div>
