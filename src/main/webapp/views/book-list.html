@@ -1,0 +1,29 @@
+<div id="bookList">
+    <h2>List of books</h2>
+
+    <!-- Action bar -->
+    <section class="well form-inline">
+        <input class="span5" type="text" ng-model="search" placeholder="Find">
+	    <section class="pull-right">
+	        <button class="btn btn-info" ng-click="sort = 'releaseYear'; reverse = !reverse">Sort by year</button>
+	        <button class="btn btn-info" ng-click="sort = 'title'; reverse = !reverse">Sort by title</button>
+	        <button class="btn btn-info" ng-show="isManager" ng-click="gotoNewBookPage()">Add a book</button>
+	    </section>
+    </section>
+
+    <!-- Books -->
+    <table class="table table-striped">
+	    <thead>
+	    <tr>
+	        <th>Title</th>
+	        <th>Description</th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    <tr ng-repeat="book in books | orderBy:sort">
+	        <td>{{book.title}}</td>
+	        <td>{{book.description}}</td>
+	    </tr>
+	    </tbody>
+    </table>
+</div>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="bookshopApp">
+	<head>
+	    <title>My Book Shop</title>
+	    <meta charset="UTF-8">
+	    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+	     <link href="css/app.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header class="navbar navbar-fixed-top">
+		    <div class="navbar-inner">
+		        <section class="container">
+		            <a href="#/welcome" class="brand">My Book Shop</a>
+		            <ul class="nav">
+		                <li><a href="#/book/list">Books</a></li>
+		            </ul>
+		        </section>
+		    </div>
+		</header>
+        <section class="container" ng-view="">
+        </section>
+	    <script src="js/libs/angular-1.0.3.js"></script>
+        <script src="js/libs/angular-locale_fr-fr.js"></script>
+        <script src="js/app/application.js"></script>
+        <script src="js/app/services.js"></script>
+        <script src="js/app/controllers.js"></script>
+	</body>
+</html>
