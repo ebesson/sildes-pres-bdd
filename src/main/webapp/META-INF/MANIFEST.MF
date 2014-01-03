@@ -1,8 +1,9 @@
 Manifest-Version: 1.0
-Class-Path: aopalliance-1.0.jar commons-logging-1.1.1.jar jackson-core
- -asl-1.9.4.jar jackson-mapper-asl-1.9.4.jar spring-aop-3.1.2.RELEASE.
- jar spring-asm-3.1.2.RELEASE.jar spring-beans-3.1.2.RELEASE.jar sprin
- g-context-3.1.2.RELEASE.jar spring-context-support-3.1.2.RELEASE.jar 
- spring-core-3.1.2.RELEASE.jar spring-expression-3.1.2.RELEASE.jar spr
- ing-web-3.1.2.RELEASE.jar spring-webmvc-3.1.2.RELEASE.jar
+Class-Path: aopalliance-1.0.jar commons-logging-1.1.1.jar fluentlenium
+ -core-0.9.1.jar fluentlenium-cucumber-0.9.1.jar jackson-core-asl-1.9.
+ 4.jar jackson-mapper-asl-1.9.4.jar spring-aop-3.1.2.RELEASE.jar sprin
+ g-asm-3.1.2.RELEASE.jar spring-beans-3.1.2.RELEASE.jar spring-context
+ -3.1.2.RELEASE.jar spring-context-support-3.1.2.RELEASE.jar spring-co
+ re-3.1.2.RELEASE.jar spring-expression-3.1.2.RELEASE.jar spring-web-3
+ .1.2.RELEASE.jar spring-webmvc-3.1.2.RELEASE.jar
 
