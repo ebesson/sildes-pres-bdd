@@ -1,4 +1,4 @@
-<div id="todoNew">
+<div id="todoNew" ng-controller="bookFormController">
 
     <h2>New Book</h2>
 
@@ -18,7 +18,7 @@
         <hr/>
 
        <!-- <button class="btn btn-lg btn-primary" ng-click="gotoTodoListPage()">Retour</button> &nbsp;  -->
-        <button class="btn btn-lg btn-primary" ng-click="addBook(book)">Sauver</button>
+        <button id="save" class="btn btn-lg btn-primary" ng-click="addBook(book)">Sauver</button>
 
     </form>
 

@@ -1,4 +1,4 @@
-<div id="bookList">
+<div id="bookList" ng-controller="bookController">
     <h2>List of books</h2>
 
     <!-- Action bar -->
@@ -6,7 +6,7 @@
         <input class="span5" type="text" ng-model="search" placeholder="Find">
 	    <section class="pull-right">
 	        <button class="btn btn-info" ng-click="sort = 'releaseYear'; reverse = !reverse">Sort by year</button>
-	        <button class="btn btn-info" ng-click="sort = 'title'; reverse = !reverse">Sort by title</button>
+	        <button class="btn btn-info" ng-click="sort = 'title'; reverse = ! reverse">Sort by title</button>
 	        <button id="button-add" class="btn btn-info" ng-show="isManager" ng-click="gotoNewBookPage()">Add a book</button>
 	    </section>
     </section>

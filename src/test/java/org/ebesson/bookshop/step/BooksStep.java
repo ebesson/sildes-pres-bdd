@@ -12,6 +12,7 @@ import org.junit.Assert;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -26,6 +27,20 @@ public class BooksStep extends BaseStep {
 
     @Page
     private HomePage homePage;
+
+    @Before
+    public void before() {
+
+    }
+
+    @After
+    public void after() {
+        this.quit();
+    }
+
+    /*
+     * Scenario: Affichage du formulaire de création d'un livre
+     */
 
     @Given("^je suis sur la page d'accueil$")
     public void je_suis_sur_la_page_d_accueil() {
@@ -43,13 +58,32 @@ public class BooksStep extends BaseStep {
         Assert.assertTrue(pageSource().contains("New Book"));
     }
 
-    @Before
-    public void before() {
-
+    /*
+     * Scenario: Création d'un livre
+     */
+    @Given("^je suis sur le formulaire de création d'un livre$")
+    public void je_suis_sur_le_formulaire_de_creation() {
+        start();
+        goTo(bookFormPage);
     }
 
-    @After
-    public void after() {
-        this.quit();
+    @When("^je saisi un titre$")
+    public void je_saisi_un_titre() {
+        bookFormPage.setTitle("Essai");
+    }
+
+    @And("^je saisi un titre une description$")
+    public void je_saisi_une_description() {
+        bookFormPage.setDescription("Desc");
+    }
+
+    @And("^que je valide$")
+    public void je_valide() {
+        bookFormPage.save();
+    }
+
+    @Then("^le livre est cree$")
+    public void le_livre_est_cree() throws Throwable {
+        Assert.assertTrue(getDriver().getPageSource().contains("List of books"));
     }
 }
