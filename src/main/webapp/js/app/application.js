@@ -1,6 +1,6 @@
 'use strict';
 
-var angularBookApp = angular.module('bookshopApp', []);
+var angularBookApp = angular.module('bookshopApp', ['ngRoute']);
 
 angularBookApp.config([ '$routeProvider', function($routeProvider) {
 	$routeProvider.
