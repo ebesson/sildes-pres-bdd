@@ -28,6 +28,7 @@
         <version.fluentlenium-cucumber>0.9.1</version.fluentlenium-cucumber>
         <version.cucumber>1.1.4</version.cucumber>
         <selenium-java.version>2.39.0</selenium-java.version>
+        <phantomjsdriver.version>1.0.4</phantomjsdriver.version>
 
     </properties>
 
@@ -126,6 +127,14 @@
             <version>${selenium-java.version}</version>
             <scope>test</scope>
         </dependency>
+        <!--
+        <dependency>
+            <groupId>com.github.detro.ghostdriver</groupId>
+            <artifactId>phantomjsdriver</artifactId>
+            <version>${phantomjsdriver.version}</version>
+            <scope>test</scope>
+        </dependency>
+         -->
     </dependencies>
 
     <!-- ================================================================================ -->
