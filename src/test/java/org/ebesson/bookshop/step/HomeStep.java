@@ -1,11 +1,8 @@
 package org.ebesson.bookshop.step;
 
 import org.ebesson.bookshop.page.HomePage;
-import org.fluentlenium.adapter.FluentTest;
 import org.fluentlenium.core.annotation.Page;
-import org.fluentlenium.cucumber.adapter.util.SharedDriver;
 import org.junit.Assert;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -16,31 +13,31 @@ import cucumber.api.java.en.When;
 /**
  *
  */
-@SharedDriver(type = SharedDriver.SharedType.PER_SCENARIO)
-public class HomeStep extends FluentTest {
+
+public class HomeStep extends BaseStep {
 
     @Page
-    HomePage page;
-
-    @Before
-    public void before() {
-        this.initFluent(new FirefoxDriver());
-        this.initTest();
-    }
+    private HomePage page;
 
     @Given("^je demarre mon navigateur$")
     public void je_demarre_mon_navigateur() {
-
+        start();
     }
 
     @When("^je vais sur la page d accueil$")
-    public void je_vais_sur_la_pag_d_accueil() {
+    public void je_vais_sur_la_page_d_accueil() {
         goTo(page);
+        page.isAt();
     }
 
-    @Then("^le titre est affichee$")
+    @Then("^le titre est affichée$")
     public void le_titre_est_affichee() throws Throwable {
         Assert.assertTrue(title().contains("My Book Shop"));
+    }
+
+    @Before
+    public void before() {
+
     }
 
     @After

@@ -39,10 +39,16 @@ public class BookController {
 
     @RequestMapping(value = "/book", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void create(@RequestBody final Book todo) {
+    public void create(@RequestBody final Book book) {
         long id = bookIdGenerator.incrementAndGet();
-        todo.setId(id);
-        bookRepository.put(id, todo);
+        book.setId(id);
+        bookRepository.put(id, book);
+    }
+
+    @RequestMapping(value = "/book", method = RequestMethod.PUT)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void put(@RequestBody final Book book) {
+        bookRepository.put(book.getId(), book);
     }
 
     @RequestMapping(value = "/book/{id}", method = RequestMethod.DELETE)

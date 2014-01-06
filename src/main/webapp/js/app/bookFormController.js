@@ -19,21 +19,3 @@ angularBookApp.controller("booksController",function ($scope,$location, Book){
        	$location.path("/book/list");
     };
 });
-
-angularBookApp.controller("bookFormController" ,function ($scope,$location, Book) {
-
-    $scope.showAlert = false;
-
-    $scope.addBook = function(book){
-    	Book.create(book)
-            .success(function(){
-               	$location.path("/book/list");
-            })
-            .error(function(resp, statusCode){
-                // Affichage d'un message d'erreur
-                $scope.errorTitle = 'Erreur ' + statusCode ;
-                $scope.errorMessage = resp.error;
-                $scope.showAlert = true;
-            });
-    };
-});

@@ -9,8 +9,8 @@ angularBookApp.factory("Book", function ($http) {
             return $http.get(API_URI);
         },
 
-        create : function(movie) {
-            return  $http.post(API_URI, movie);
+        create : function(book) {
+            return  $http.post(API_URI, book);
         },
 
         remove  : function(id) {
@@ -21,8 +21,8 @@ angularBookApp.factory("Book", function ($http) {
             return $http.get(API_URI + '/' + id);
         },
 
-        update : function(movie) {
-             return $http.put(API_URI, movie);
+        update : function(book) {
+             return $http.put(API_URI, book);
         }
     };
 });
