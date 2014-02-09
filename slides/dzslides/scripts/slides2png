@@ -64,7 +64,7 @@ Browser.drive {
         script.append("#!/bin/sh\n\ncd `dirname \$0`\nconvert")
       }
       script.append(' slide_' + idx + '.png')
-      body << Keys.SPACE
+      body << Keys.PAGE_DOWN
       idx++
       sleep 500
     }

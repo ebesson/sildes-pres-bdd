@@ -1,17 +1,4 @@
-//
-// Export to...
-//
-// dzslides with embedded assets:
-// asciidoc bdd.asciidoc
-//
-// dzslides with embedded assets:
-// asciidoc -a data-uri -a linkcss! bdd.asciidoc
-//
-// HTML5:
-// asciidoc -b html5 -o outline.html bdd.asciidoc
-//
-Introduction au BDD
-===================
+= Introduction au BDD
 Etienne BESSON
 v1.0, Feb 12, 2013
 :title: Une présentation de BDD
@@ -19,27 +6,16 @@ v1.0, Feb 12, 2013
 :slidesurl: http://ebesson.github.io
 :imagesdir: images
 :backend: dzslides
-:linkcss: true
 :dzslides-style: stormy
 :dzslides-transition: fade
 :dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
 :dzslides-highlight: monokai
-// disable syntax highlighting unless turned on explicitly
-:syntax: no-highlight
+:source-highlighter: highlightjs
 
-== \\
+[.topic.intro]
+== Introduction
 
-.Bulleted 2
-- Agenda
-	* Introduction
-
-
-== \\
-
-[{statement}]
-Introduction 
-
-== \\
+== \\ 
 
 .Bulleted 2
 - Ce que n'est pas BDD :
@@ -48,29 +24,23 @@ Introduction
 	* - BDD n'est pas associée aux tests sélénium
 	* - BDD n'est pas un outil
 
-
-== \\
-
-[{statement}]
-Comment se passent souvent les projets informatiques...
+[.topic.intro]
+== Comment se passent souvent les projets informatiques...
 
 == \\
 
 image::cell_01.jpg[height="80%",align="center"]
 Ce que le client a expliqué
-
 					
 == \\
 
 image::cell_02.jpg[height="80%",align="center"]
-Ce qu'a compris le chef de projet
-					
+Ce qu'a compris le chef de projet					
 					
 == \\
 
 image::cell_03.jpg[height="80%",align="center"]
-Ce que l'analyste a conçu
-					
+Ce que l'analyste a conçu				
 					
 == \\
 
@@ -80,26 +50,22 @@ Ce que le développeur a fait
 == \\
 
 image::cell_05.jpg[height="80%",align="center"]
-Ce que les béta-testeurs ont reçu
-					
+Ce que les béta-testeurs ont reçu					
 					
 == \\
 
 image::cell_06.jpg[height="80%",align="center"]
 Comment les commerciaux l'ont décrit
-
 			
 == \\
 
 image::cell_07.jpg[height="80%",align="center"]
-Comment le projet a été documenté
-				
+Comment le projet a été documenté				
 					
 == \\
 
 image::cell_08.jpg[height="80%",align="center"]
-Ce que la production a installé
-		
+Ce que la production a installé	
 					
 == \\
 
@@ -109,30 +75,53 @@ Ce que le client a été facturé
 == \\
 
 image::cell_10.jpg[height="80%",align="center"]
-Ce que l'assistance a apporté
-	
+Ce que l'assistance a apporté	
 					
 == \\
 
 image::cell_11.jpg[height="80%",align="center"]
-Ce que le marketing a vendu
-					
+Ce que le marketing a vendu				
 					
 == \\
 
 image::cell_13.jpg[height="80%",align="center"]
-Ce dont le client avait vraiment besoin
-					
+Ce dont le client avait vraiment besoin					
 					
 == \\
 
 Les faces cachées de la communication
 
+== \\
+
 L'ambiguité : Il a trouvé un avocat
+
+== \\
 
 Illusion
 
+== \\
+
 Amphibologie
 
-
 == \\
+
+[.topic.ending]
+== Fin!
+
+== !
+
+*Title*
+
+== !
+
+[.incremental]
+* dzslides
+* deckjs
+
+[.topic.source]
+== Source
+
+[source,ruby]
+--
+puts 'Hello, World!'
+--

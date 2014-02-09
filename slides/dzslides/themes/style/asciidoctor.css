@@ -1,6 +1,6 @@
 /*
  Theme: Asciidoctor
- Fonts: Neuton, Cedarville Cursive
+ Fonts: Neuton, Cedarville Cursive (optional)
 
  <link href="http://fonts.googleapis.com/css?family=Neuton:400,700,800,400italic" rel="stylesheet">
  <link href="http://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
@@ -26,11 +26,7 @@
  Shade ........ #1A6074
  Border ....... #DDDDDD
  ...
-
-TODO:
-- make console commands larger
 */
-
 html, .view body {
   background: #ededed url(../../images/noise.png) repeat;
   counter-reset: slideidx;
@@ -315,6 +311,11 @@ section ul.split > li {
   width: 50%;
 }
 
+/* temporary!! */
+section ul.scatter {
+  font-size: 1.5em;
+}
+
 section ul.split > li:nth-of-type(2n),
 section ul.scatter > li:nth-of-type(2n) {
   float: right;
@@ -349,7 +350,8 @@ section .graffiti strong, section .graffiti em {
 }
 
 section dt {
-  font-size: 3em;
+  /*font-size: 3em;*/
+  font-size: 1.5em;
   color: #BA3925;
   text-transform: uppercase;
   font-weight: 700;
@@ -357,13 +359,19 @@ section dt {
   line-height: 1em;
 }
 
+section dt:after {
+  content: ':';
+}
+
 section dd {
   color: #222222;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-weight: 700;
   line-height: 1em;
-  margin-bottom: 2em;
-  font-size: 2em;
+  /*margin-bottom: 2em;
+  font-size: 2em;*/
+  margin-bottom: 1em;
+  font-size: 1.5em;
 }
 
 section dt:nth-of-type(2n),
@@ -507,9 +515,17 @@ figcaption {
   width: 100%;
 }
 
+/*
 figcaption.invert {
   color: #FFFFFF;
   text-shadow: 2px 2px #000000;
+}
+*/
+
+figure img.invert + figcaption {
+  font-size: 4em;
+  color: #FFFFFF;
+  /*text-shadow: 2px 2px #000000;*/
 }
 
 section.title footer {
@@ -580,6 +596,11 @@ section pre code, section pre.literal {
   white-space: pre-wrap;
 }
 
+section pre.nowrap code {
+  white-space: pre;
+  /*overflow-x: hidden;*/
+}
+
 section pre.literal {
   font-size: 0.65em;
   line-height: 1.1;
@@ -625,6 +646,16 @@ img.stretch-x {
 
 img.stretch-y {
   height: 100%;
+}
+
+figure > img.relax-y {
+  height: auto;
+  top: auto;
+  margin: auto 0;
+}
+
+figure > img.relax-x {
+  width: auto;
 }
 
 img.scale{
@@ -707,7 +738,8 @@ section.title h1 strong {
 
 section.intro h1 strong,
 section.intro h2 strong {
-  font-size: 3.5em;
+  /*font-size: 3.5em;*/
+  font-size: 3em;
 }
 
 section p {
@@ -810,6 +842,8 @@ ol {
 .conum:after { content: attr(data-value); }
 .conum:not([data-value]):empty { display: none; }
 
-.icon-note:before{content:"\f05a";}
-.icon-tip:before{content:"\f0eb";}
-.icon-important:before{content:"\f071";}
+.icon-note:before { content:"\f05a"; }
+.icon-tip:before { content:"\f0eb"; }
+.icon-warning:before { content: "\f071"; }
+.icon-caution:before { content: "\f06d"; }
+.icon-important:before { content:"\f06a"; }
